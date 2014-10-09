@@ -15,32 +15,23 @@ common:
    pwd: 123456
 
 ems:
-   user: member
    invite: member
-   picture: image
    event: score
-
+   score: score
+   user_score: score
+   sys_resource: acl
+   sys_role: acl
+   sys_role_resource: acl
+   sys_role_user: acl
 ms:
    - name: member
      master: 127.0.0.1:3306/ec_member
-     slaves: 127.0.0.1:3306/ec_member
+     slave: 127.0.0.1:3306/ec_member
 
    - name: score
      master: 127.0.0.1:3306/ec_score
-     slaves: 127.0.0.1:3306/ec_score
+     slave: 127.0.0.1:3306/ec_score
 
-   - name: home
-     master: 127.0.0.1:3306/ec_home
-     slaves: 127.0.0.1:3306/ec_home
-
-   - name: url
-     master: 127.0.0.1:3306/ec_url
-     slaves: 127.0.0.1:3306/ec_url
-
-   - name: mall
-     master: 127.0.0.1:3306/ec_mall
-     slaves: 127.0.0.1:3306/ec_mall
-
-   - name: image
-     master: 127.0.0.1:3306/ec_image
-     slaves: 127.0.0.1:3306/ec_image
+   - name: acl
+     master: 127.0.0.1:3306/acl_sys
+     slave: 127.0.0.1:3306/acl_sys

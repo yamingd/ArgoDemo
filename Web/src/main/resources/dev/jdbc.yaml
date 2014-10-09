@@ -26,12 +26,12 @@ ems:
 ms:
    - name: member
      master: 127.0.0.1:3306/ec_member
-     slaves: 127.0.0.1:3306/ec_member
+     slave: 127.0.0.1:3306/ec_member
 
    - name: score
      master: 127.0.0.1:3306/ec_score
-     slaves: 127.0.0.1:3306/ec_score
+     slave: 127.0.0.1:3306/ec_score
 
    - name: acl
      master: 127.0.0.1:3306/acl_sys
-     slaves: 127.0.0.1:3306/acl_sys
+     slave: 127.0.0.1:3306/acl_sys
