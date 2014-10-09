@@ -1,11 +1,14 @@
 package com.equation.testcases.controller;
 
+import com.argo.acl.SysRole;
+import com.argo.core.web.BsonResponse;
 import com.argo.core.web.JsonResponse;
 import com.equation.testcases.BaseTestCase;
 import com.google.common.collect.Maps;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -70,6 +73,15 @@ public class SysRoleControllerTest extends BaseTestCase {
         JsonResponse html = super.getJson(url, null);
         Assert.assertNotNull(html);
         System.out.println(html);
+    }
+
+    @Test
+    public void testSelect2() throws Exception {
+        String url = "/acl/sys/role/select.bson";
+        BsonResponse html = super.getBson(url, null);
+        Assert.assertNotNull(html);
+        List<SysRole> roles = html.dataBeans(SysRole.class);
+        System.out.println(roles);
     }
 
     @Test
