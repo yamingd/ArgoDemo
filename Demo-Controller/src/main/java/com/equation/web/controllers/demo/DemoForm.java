@@ -15,31 +15,31 @@ import java.util.Date;
  */
 public class DemoForm {
 
-    @NotEmpty(message = "uname")
-    @Length(min=0, max=10)
+    @NotEmpty(message = "uname_empty")
+    @Length(min=0, max=10, message = "uname_too_long")
     private String uname;
 
-    @NotEmpty(message = "email")
-    @Email
+    @NotEmpty(message = "email_empty")
+    @Email(message = "email_format_invalid")
     private String email;
 
-    @NotEmpty(message = "passwd")
-    @Length(min=0, max=10)
+    @NotEmpty(message = "passwd_empty")
+    @Length(min=0, max=10, message = "passwd_too_long")
     private String passwd;
 
-    @NotEmpty(message = "iconUrl")
+    @NotEmpty(message = "iconUrl_empty")
     private String iconUrl;
 
-    @NotEmpty
+    @NotNull(message = "prize_empty")
     private Integer prize;
 
-    @URL
+    @URL(message = "httpUrl_format_invalid")
     private String httpUrl;
 
     private String token;
 
     @DateTimeFormat(pattern="yyyy-MM-dd")
-    @NotNull
+    @NotNull(message = "birthday_empty")
     @Past
     private Date birthday;
 
