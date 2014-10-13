@@ -1,6 +1,6 @@
 $(function() {
     // Bootstrap
-    $('#bootstrap-editor').wysihtml5();
+    $('#bootstrap-editor').wysihtml5({locale: 'zh-CN'});
 
     // Ckeditor standard
     $( 'textarea#ckeditor_standard' ).ckeditor({width:'98%', height: '150px', toolbar: [
