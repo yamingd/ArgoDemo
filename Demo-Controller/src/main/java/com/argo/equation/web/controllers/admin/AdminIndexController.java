@@ -28,6 +28,11 @@ public class AdminIndexController extends BaseController {
         }
     }
 
+    @RequestMapping(value = "/form", method= RequestMethod.GET)
+    public String form(){
+        return "admin/form";
+    }
+
     /**
      * 登录.
      * 访问URL: /admin/signin
